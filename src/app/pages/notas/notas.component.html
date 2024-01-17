@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card  card-tasks">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <div>
+          <h5 class="card-category">Crea tareas</h5>
+          <h4 class="card-title">Tareas</h4>
+        </div>
+        <button [routerLink]='"/crear_nota"' type="button" class="btn btn-success">
+          <i class="now-ui-icons ui-1_simple-add"></i>
+        </button>
+      </div>
+      
+      <div class="card-body ">
+        <div class="table-full-width table-responsive">
+          <table class="table">
+            <tbody>
+              <tr *ngFor="let nota of notas">
+                <td>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input (change)="cambiarEstadoNota(nota[0])" class="form-check-input" type="checkbox" [checked]="nota[2]">
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>
+                </td>
+                <td class="text-left">{{nota[1]}}</td>
+                <td class="td-actions text-right">
+                  <button  [routerLink]="['/crear_nota', nota[0]]" type="button" rel="tooltip" title="" class="btn btn-success btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task">
+                    <i class="now-ui-icons ui-2_settings-90"></i>
+                  </button>
+                  <button (click)="eliminarNota(nota[0])" type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Remove">
+                    <i class="now-ui-icons ui-1_simple-remove"></i>
+                  </button>
+                </td>
+              </tr>            
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TodoAngular';
+  rutas=[
+    {icon:'now-ui-icons design_app',
+     link:'/',
+     name:'Dashboard'
+    },
+    {icon:'now-ui-icons education_atom',
+     link:'/notas',
+     name:'NOTAS'
+    },
+    
+  ]
+  
+  constructor(private router: Router){
+    
+  }
+
 }

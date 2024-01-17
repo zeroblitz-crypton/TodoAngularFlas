@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">{{isEdit ? 'Editar Nota' : 'Crear Nota'}}</h5>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="formulario">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Escribe la nota</label>
+                  <textarea rows="4" cols="80" formControlName="nota" class="form-control" placeholder="Describe tu nota"></textarea>
+                </div>
+              </div>
+            </div>
+            <button (click)="guardar()" type="button" class="btn btn-success">
+              Guardar
+            </button>
+            <button [routerLink]="'/notas'" type="button" class="btn btn-danger">
+              Cancelar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

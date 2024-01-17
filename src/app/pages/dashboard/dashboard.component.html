@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-lg-4">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category"></h5>
+          <h4 class="card-title">Total de Notas</h4>
+          <div class="dropdown">
+            <button type="button" class="btn btn-round btn-outline-default dropdown-toggle btn-simple btn-icon no-caret" data-toggle="dropdown">
+              <i class="now-ui-icons loader_gear"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" [routerLink]="'/notas'">Notas</a>
+                <a class="dropdown-item" [routerLink]="'/crear_nota'">Crear Nota</a>
+               
+            </div>
+          </div>
+        </div>
+        <div class="card-body text-center">
+          <h1>{{estadistica.total_registros}}</h1>
+        </div>
+        
+      </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card card-chart">
+          <div class="card-header">
+            <h5 class="card-category"></h5>
+            <h4 class="card-title">Notas Realizadas</h4>
+            
+          </div>
+          <div class="card-body text-center">
+            <h1>{{estadistica.registros_completos}}</h1>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card card-chart">
+          <div class="card-header">
+            <h5 class="card-category"></h5>
+            <h4 class="card-title">Notas Pendientes</h4>
+            
+          </div>
+          <div class="card-body text-center">
+            <h1>{{estadistica.registros_pendientes}}</h1>
+          </div>
+          
+        </div>
+      </div>
+    
+</div>
